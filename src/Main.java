@@ -15,6 +15,7 @@ public class Main {
     }
 
     public static void bubbleSort(int[] array){
+        int flag=0;
         for (int i = 0; i < array.length-1; i++) {
             //пройти по массиву от начала, проверяя попарно каждый элемент со следующим
             for (int j = 0; j < array.length-1-i; j++) {
@@ -23,8 +24,10 @@ public class Main {
                     int t = array[j];
                     array[j] = array[j+1];
                     array[j+1] = t;
+                    flag ++;
                 }
             }
+            if(flag==0) break;
         }
     }
 }
